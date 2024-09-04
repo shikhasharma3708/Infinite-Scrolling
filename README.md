@@ -26,6 +26,7 @@ iii) Contact Component: Includes a static form for contact information.
 iv) About Component: Contains static HTML content.
 v) Shimmer-UI Component: Implements a shimmer effect as a loading animation.
 vi) Hero Component: Manages the static hero section of the project.
+vii) Product Card: Implement the logic for rendering the cards fetching dynamically by using API(https://api.escuelajs.co/api/v1/products)
 
 **Routing:**
 Integrated React Router DOM to manage the flow of the application.
