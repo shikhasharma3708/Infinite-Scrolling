@@ -1,0 +1,33 @@
+{
+  "name": "infinite-scrolling",
+  "version": "1.0.0",
+  "description": "This is app to implement the infinite scrolling by dynamically rendering the items.",
+  "main": "index.js",
+  "scripts": {
+    "test": "zest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Shikha Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.0.1",
+    "@mui/material": "^6.0.1",
+    "@mui/styled-engine-sc": "^6.0.1",
+    "aos": "^3.0.0-beta.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-router-dom": "^6.26.1",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.13",
+    "typewriter-effect": "^2.21.0"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  }
+}
