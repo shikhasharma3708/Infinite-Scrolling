@@ -7,25 +7,25 @@ import ShimmerLoader from './ShimmerLoader';
 const Body = () => {
   const [items, setItems] = useState([]);
   const [hasMore, setHasMore] = useState(true);
-  const [index, setIndex] = useState(2);
+  const [index, setIndex] = useState(10);
 
   useEffect(() => {
     axios
-      .get("https://api.escuelajs.co/api/v1/products?offset=10&limit=12")
+      .get("https://api.escuelajs.co/api/v1/products?offset=0&limit=10")
       .then((res) => setItems(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const fetchMoreData = () => {
     axios
-      .get(`https://api.escuelajs.co/api/v1/products?offset=${index}&limit=12`)
+      .get(`https://api.escuelajs.co/api/v1/products?offset=${index}&limit=10`)
       .then((res) => {
         setItems((prevItems) => [...prevItems, ...res.data]);
         res.data.length > 0 ? setHasMore(true) : setHasMore(false);
     })
     .catch((err) => console.log(err));
 
-  setIndex((prevIndex) => prevIndex + 1);
+  setIndex((prevIndex) => prevIndex + 10);
 };
 return (
     <InfiniteScroll
@@ -33,6 +33,11 @@ return (
       next={fetchMoreData}
       hasMore={hasMore}
       loader={<ShimmerLoader />}
+      endMessage={
+        <p style={{ textAlign: 'center', color: '#e0a80d' }}>
+          <b>Yay! You have seen it all</b>
+        </p>
+      }
     >
       <div className='container'>
         <div className='row'>

@@ -1,12 +1,14 @@
 {
+  "homepage": "https://shikhasharma3708.github.io/Infinite-Scrolling",
   "name": "infinite-scrolling",
   "version": "1.0.0",
   "description": "This is app to implement the infinite scrolling by dynamically rendering the items.",
-  "main": "index.js",
-  "scripts": {
+    "scripts": {
     "test": "zest",
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "parcel build index.html --dist-dir build --public-url /Infinite-Scrolling/"
   },
   "author": "Shikha Sharma",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "@mui/material": "^6.0.1",
     "@mui/styled-engine-sc": "^6.0.1",
     "aos": "^3.0.0-beta.6",
+    "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-infinite-scroll-component": "^6.1.0",
@@ -27,6 +30,7 @@
   },
   "devDependencies": {
     "buffer": "^6.0.3",
+    "gh-pages": "^6.1.1",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   }

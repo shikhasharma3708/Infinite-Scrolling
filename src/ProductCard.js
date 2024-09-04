@@ -9,7 +9,6 @@ const ProductCard = ({ data }) => {
   return (
     <div className="col-md-4 mb-4">
       <div data-aos="fade-up" className="card">
-        <img src={data.image} alt={data.name} className="card-img-top" />
         <div className="card-body" data-aos="zoom-in-right">
           <h5 className="card-title">{data.name}</h5>
           <p className="card-text">{data.description}</p>

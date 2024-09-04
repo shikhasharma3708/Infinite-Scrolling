@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Header } from "./src/Header";
 import { About } from "./src/About";
 import { Contact } from "./src/Contact";
@@ -22,9 +22,14 @@ const appRouter = createBrowserRouter([
       path: "/",
       element: <AppLayout />,
       children: [
-          {
-             path: "/",
-             element: [<Hero />, <Body />],
+        {
+           path: "/",
+           element: (
+            <>
+              <Hero />
+              <Body />
+            </>
+          ),
           },
           {
               path: "/about",
