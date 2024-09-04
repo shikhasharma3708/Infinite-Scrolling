@@ -10,7 +10,7 @@ const ProductCard = ({ data }) => {
     <div className="col-md-4 mb-4">
       <div data-aos="fade-up" className="card">
         <div className="card-body" data-aos="zoom-in-right">
-          <h5 className="card-title">{data.name}</h5>
+          <h5 className="card-title">{data.title}</h5>
           <p className="card-text">{data.description}</p>
           <p className="card-text"><strong>Price:</strong> ${data.price}</p>
         </div>
