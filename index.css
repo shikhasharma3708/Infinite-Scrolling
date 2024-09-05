@@ -211,9 +211,13 @@ header a {
     margin-bottom: 60px;
   }
   @media screen and (max-width: 768px) {
-    .about-section {
+    .about-section, .contact-section {
       flex-direction: column;
   }
+  .contact-section img{
+    width: 100px;
+  }
+
   }
   /*---------about-------------*/
   .about .primaryBtn {
@@ -224,10 +228,10 @@ header a {
     margin: 0;
   }
   .left {
-    width: 35%;
+    width: 50%;
   }
   .right {
-    width: 65%;
+    width: 50%;
   }
   .about-section{
     justify-content: space-evenly;

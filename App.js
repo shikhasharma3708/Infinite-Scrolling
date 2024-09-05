@@ -6,6 +6,7 @@ import { About } from "./src/About";
 import { Contact } from "./src/Contact";
 import Body from "./src/Body";
 import { Hero } from "./src/Hero";
+import Error from "./src/Error";
 
 const AppLayout = () => {
   return (
@@ -31,6 +32,15 @@ const appRouter = createBrowserRouter([
             </>
           ),
           },
+          {
+            path: "/Infinite-Scrolling/",
+            element: (
+             <>
+               <Hero />
+               <Body />
+             </>
+           ),
+           },
           {
               path: "/about",
               element: <About />,

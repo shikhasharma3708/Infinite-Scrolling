@@ -7,25 +7,25 @@ import ShimmerLoader from './ShimmerLoader';
 const Body = () => {
   const [items, setItems] = useState([]);
   const [hasMore, setHasMore] = useState(true);
-  const [index, setIndex] = useState(10);
+  const [index, setIndex] = useState(2);
 
   useEffect(() => {
     axios
-      .get("https://api.escuelajs.co/api/v1/products?offset=0&limit=10")
+      .get("https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10")
       .then((res) => setItems(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const fetchMoreData = () => {
     axios
-      .get(`https://api.escuelajs.co/api/v1/products?offset=${index}&limit=10`)
+      .get(`https://jsonplaceholder.typicode.com/posts?_page=${index}&limit=10`)
       .then((res) => {
         setItems((prevItems) => [...prevItems, ...res.data]);
         res.data.length > 0 ? setHasMore(true) : setHasMore(false);
     })
     .catch((err) => console.log(err));
 
-  setIndex((prevIndex) => prevIndex + 10);
+  setIndex((prevIndex) => prevIndex + 1);
 };
 return (
     <InfiniteScroll
